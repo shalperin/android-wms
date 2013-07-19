@@ -2,7 +2,6 @@ package com.example.wmsdemo;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.TileOverlay;
 import com.google.android.gms.maps.model.TileOverlayOptions;
 import com.google.android.gms.maps.model.TileProvider;
 
@@ -16,7 +15,8 @@ public class MainActivity extends android.support.v4.app.FragmentActivity {
 	 *  (The data is a white map with state boundaries.)
 	 * 
 	 *  GOTCHAS:
-	 *  Add the google-play-services_lib as a build dependency
+	 *  Import the google play services library (downloaded with the sdk manager)
+	 *   into your workspace, and Add it as a build dependency
 	 *  	Project=>Properties=>Android=>Library=>Add
 	 *  
 	 *  Create a debugging Maps API Key and add it to the manifest.
@@ -46,7 +46,7 @@ public class MainActivity extends android.support.v4.app.FragmentActivity {
     
     private void setUpMap() {
     	TileProvider wmsTileProvider = TileProviderFactory.getOsgeoWmsTileProvider();
-        TileOverlay wmsTileOverlay = mMap.addTileOverlay(new TileOverlayOptions().tileProvider(wmsTileProvider));
+        mMap.addTileOverlay(new TileOverlayOptions().tileProvider(wmsTileProvider));
 
         // Because the demo WMS layer we are using is just a white background map, switch the base layer
         // to satellite so we can see the WMS overlay.
