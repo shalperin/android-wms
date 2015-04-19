@@ -7,6 +7,11 @@ Sam Halperin<br>
 email: <a href="mailto:sam@samhalperin.com">sam@samhalperin.com</a>
 </p>
 
+<p>
+    <i>There is also a README-QuickStart.md in the root of the GitHub
+repo.</i>
+</p>
+
 <center>
 ![WMS Image](http://auto2.cdn.azavea.com/blogs/labs/wp-content/uploads/2013/01/306x600xptm-phone-306x600.png.pagespeed.ic.9fKei2Oev9.png)
 <br><br>
@@ -45,7 +50,7 @@ For basic <i>getting started</i> info for v2 Maps, see the <a href="https://deve
 
 <h3>Dividing by the number of tiles for a given zoom level.</h3>
 <p>
-The number of tiles in either x or z at any zoom level is  n = 2^z.   With this, and the bounds of the map, we can figure out the size of the tile.  Using this information combined with the maps origin (see graphic) and the x, y, zoom data for a given tile, we can find out its bounding box.
+The number of tiles in either x or y at any zoom level is  n = 2^z.   With this, and the bounds of the map, we can figure out the size of the tile.  Using this information combined with the maps origin (see graphic) and the x, y, zoom data for a given tile, we can find out its bounding box.
 </p>
 
 <p>Again from the <a href="https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/model/TileOverlay">google api docs for TileOverlay</a>:<br>
@@ -62,7 +67,7 @@ The number of tiles in either x or z at any zoom level is  n = 2^z.   With this,
 </p>
 
 
-![Map Bounds](http://www.samhalperin.com/image?key=ahNzfmhhbHBlcmluLWJsb2ctaHJkcg0LEgVJbWFnZRjivAsM)
+![Map Bounds](http://www.samhalperin.com/img/projects/wms-android/bounds-sketch.png)
 <p></p>
 
 <p>

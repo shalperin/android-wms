@@ -11,13 +11,18 @@ import android.util.Log;
 public class TileProviderFactory {
 	
 	public static WMSTileProvider getOsgeoWmsTileProvider() {
-		
-		final String OSGEO_WMS =
-				"http://vmap0.tiles.osgeo.org/wms/vmap0" +
+
+
+        //This is configured for:
+        // http://beta.sedac.ciesin.columbia.edu/maps/services
+        // (TODO check that this WMS service still exists at the time you try to run this demo,
+        // if it doesn't, find another one that supports EPSG:900913
+        final String WMS_FORMAT_STRING =
+				"http://sedac.ciesin.columbia.edu/geoserver/wms" +
 	    		"?service=WMS" +
 	    		"&version=1.1.1" +  			
 	    		"&request=GetMap" +
-	    		"&layers=basic" +
+	    		"&layers=gpw-v3-population-density_2000" +
 	    		"&bbox=%f,%f,%f,%f" +
 	    		"&width=256" +
 	    		"&height=256" +
@@ -31,7 +36,7 @@ public class TileProviderFactory {
 	        @Override
 	        public synchronized URL getTileUrl(int x, int y, int zoom) {
 	        	double[] bbox = getBoundingBox(x, y, zoom);
-	            String s = String.format(Locale.US, OSGEO_WMS, bbox[MINX], 
+	            String s = String.format(Locale.US, WMS_FORMAT_STRING, bbox[MINX],
 	            		bbox[MINY], bbox[MAXX], bbox[MAXY]);
 	            Log.d("WMSDEMO", s);
 	            URL url = null;

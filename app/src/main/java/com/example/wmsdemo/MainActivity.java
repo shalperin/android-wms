@@ -13,11 +13,6 @@ public class MainActivity extends android.support.v4.app.FragmentActivity {
 	/*	GOAL:
 	 *  Display a WMS overlay from OSGEO on top of a google base map.  
 	 *  (The data is a white map with state boundaries.)
-	 * 
-	 *  GOTCHAS:
-	 *  Import the google play services library (downloaded with the sdk manager)
-	 *   into your workspace, and Add it as a build dependency
-	 *  	Project=>Properties=>Android=>Library=>Add
 	 *  
 	 *  Create a debugging Maps API Key and add it to the manifest.
 	 * 
