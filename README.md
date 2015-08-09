@@ -13,7 +13,7 @@ repo.</i>
 </p>
 
 <center>
-![WMS Image](http://auto2.cdn.azavea.com/blogs/labs/wp-content/uploads/2013/01/306x600xptm-phone-306x600.png.pagespeed.ic.9fKei2Oev9.png)
+![WMS Image](designAssets/ptm.png)
 <br><br>
 <a href="http://www.phillytreemap.org">PhillyTreeMap</a> Android App (Released Spring 2013) <br> showing WMS technique described in the article.</i>
 
@@ -67,7 +67,7 @@ The number of tiles in either x or y at any zoom level is  n = 2^z.   With this,
 </p>
 
 
-![Map Bounds](http://www.samhalperin.com/img/projects/wms-android/bounds-sketch.png)
+![Map Bounds](designAssets/web_merc.png)
 <p></p>
 
 <p>
@@ -86,7 +86,7 @@ The number of tiles in either x or y at any zoom level is  n = 2^z.   With this,
 <h3>Demo Code</h3>
 
 <p>
-In addition to the following code snippets, I’ve put <a href="https://github.com/shalperin/android-wms-demo">a sample project on github.</a>
+In addition to the following code snippets, I’ve put <a href="https://github.com/shalperin/android-wms">a sample project on github.</a>
 </p>
 <p>
 Here is a WMSTileProvider class, which inherits from UrlTileProvider.  It supports the above bounding box calculation.</p>
@@ -211,5 +211,7 @@ public class MapDisplay extends android.support.v4.app.FragmentActivity {
 
 
 ### This article was covered in the following Google Maps Garage episode:
-<p><a href="https://www.youtube.com/watch?feature=player_embedded&v=U6ZbHAXPnhg"><img src="http://www.samhalperin.com/img/projects/wms-android/garage2.png"></a></p>
-<iframe width="560" height="315" src="//www.youtube.com/embed/U6ZbHAXPnhg" frameborder="0" allowfullscreen></iframe></div>
+
+
+[![Google Maps Garage](designAssets/google_maps_garage.png)](https://www.youtube.com/watch?feature=player_embedded&v=U6ZbHAXPnhg)
+
