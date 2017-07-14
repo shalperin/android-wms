@@ -1,8 +1,10 @@
+[![DOI](https://zenodo.org/badge/50740613.svg)](https://zenodo.org/badge/latestdoi/50740613)
+
 # Android Web Map Service
 
 ## Implemented Using a Google Maps Android API v2, TileLayer
 
-###Android Weekly, 2/2013
+### Android Weekly, 2/2013
 Sam Halperin
 email: [sam@samhalperin.com](mailto:sam@samhalperin.com)
 
@@ -14,7 +16,7 @@ email: [sam@samhalperin.com](mailto:sam@samhalperin.com)
 
 *[PhillyTreeMap](http://www.phillytreemap.org) Android App (Released Spring 2013) showing WMS technique described in the article.*
 
-##Intro
+## Intro
 
 This brief article documents some early exploration into using WMS with the new Google Maps V2 API.  It is intended as a reference to help someone trying to get WMS tiles (IE from GeoServer) onto an Android map.
 
@@ -22,7 +24,7 @@ WMS is used to serve map tiles over HTTP by back end frameworks like GeoServer. 
 
 For basic *getting started* info for v2 Maps, see the [Google Developer's site](https://developers.google.com/maps/documentation/android/) for the v2 API.  This article assumes a working v2 setup with the sample code running without error. After downloading the google play SDK and setting up the library make sure you can view the TileOverlayDemo. ($ANDROID_SDK_ROOT/extras/google/google_play_services/samples/maps)</p>
 
-##Extending the UrlTileProvider class.
+## Extending the UrlTileProvider class.
 *Please refer to the sample code at the end of this post.*
 
 The v2 API provides the UrlTileProvider class,  a partial implementation of the TileProvider class which allows developers to pull in map tiles by composing a URL string.  
@@ -34,7 +36,7 @@ The API to UrlTileProvider is its getTileUrl method.  To request a WMS tile, we 
 provides tile indexes (x and y) and a zoom level, but WMS requires that we provide a bounding box (xmin, ymin, xmax, ymax) in the request URL.  The x, y, zoom parameters provide us enough information to figure this out, but we have to do a little bit of math.
 
 
-##Calculating the map bounds
+## Calculating the map bounds
 
 We know the bounds of the entire map which is square. (roughly -20037508m to 20037508m in both directions using Web Mercator.  See the graphic below or the [map tiler site](http://www.maptiler.org/google-maps-coordinates-tile-bounds-projection/) for exact values.)    We don't use Latitude/Longitude though, because it is unprojected, and this will cause map distortions.
 
@@ -43,7 +45,7 @@ From the [google api docs for TileOverlay](https://developers.google.com/maps/do
 
 "Note that the world is projected using the Mercator projection (see http://en.wikipedia.org/wiki/Mercator_projection) with the left (west) side of the map corresponding to -180 degrees of longitude and the right (east) side of the map corresponding to 180 degrees of longitude. To make the map square, the top (north) side of the map corresponds to 85.0511 degrees of latitude and the bottom (south) side of the map corresponds to -85.0511 degrees of latitude. Areas outside this latitude range are not rendered."
 
-###Dividing by the number of tiles for a given zoom level.
+### Dividing by the number of tiles for a given zoom level.
 
 The number of tiles in either x or y at any zoom level is  n = 2^z.   With this, and the bounds of the map, we can figure out the size of the tile.  Using this information combined with the maps origin (see graphic) and the x, y, zoom data for a given tile, we can find out its bounding box.
 
@@ -61,7 +63,7 @@ Again from the [google api docs for TileOverlay](https://developers.google.com/m
 
 ![Map Bounds](designAssets/web_merc.png)
 
-##Summary
+## Summary
 + zoom  level: z = [0..21] (See GoogleMap.get[Min|Max]ZoomLevel)
 + map size: S = 20037508.34789244 * 2 *This constant comes from converting the lat/long values above to EPSG:900913, Web Mercator. Again, see <a href="http://www.maptiler.org/google-maps-coordinates-tile-bounds-projection/">this page on maptiler</a> for a fantastic visual explanation.*
 + tile size = S / Math.pow(2, z) *So @ zoom level 0, S is the full map, at zoom level 1 there are 2x2 tiles, and at zoom 3 there are 8x8 tiles and so forth.*
@@ -72,7 +74,7 @@ Again from the [google api docs for TileOverlay](https://developers.google.com/m
 + maxY of the tiles bbox (for tile index x,y)= origin.y + (y+1) * S
 
 
-##Demo Code
+## Demo Code
 
 In addition to the following code snippets, please see the complete demo in this repository.
 
@@ -182,7 +184,7 @@ So your Activity code (again see the sample Google maps code referenced above) w
 
 
 
-##Conclusion
+## Conclusion
 
 This article presented a demonstration of a simple WMS client using Google's Android v2 Maps API.  It covered the math involved with converting from tile index/zoom level to Web Mercator bounding box, and showed how to compose a URL using these values and an instance of Google's UrlTileProvider class. 
 
