@@ -11,7 +11,8 @@ email: [sam@samhalperin.com](mailto:sam@samhalperin.com)
 
 *There is also a README-QuickStart.md in the root of the GitHub repo.*
 
-![WMS Image](designAssets/ptm.png)
+![WMS Image](https://github.com/shalperin/android-wms/blob/master/designAssets/ptm.png?raw=true
+)
 
 
 *[PhillyTreeMap](http://www.phillytreemap.org) Android App (Released Spring 2013) showing WMS technique described in the article.*
@@ -61,7 +62,7 @@ Again from the [google api docs for TileOverlay](https://developers.google.com/m
 
 + At zoom level N, the world is divided into 4N tiles arranged in a 2^N x 2^N grid."
 
-![Map Bounds](designAssets/web_merc.png)
+![Map Bounds](https://github.com/shalperin/android-wms/blob/master/designAssets/web_merc.png?raw=true)
 
 ## Summary
 + zoom  level: z = [0..21] (See GoogleMap.get[Min|Max]ZoomLevel)
@@ -192,5 +193,5 @@ This article presented a demonstration of a simple WMS client using Google's And
 ### This article was covered in the following Google Maps Garage episode:
 
 
-[![Google Maps Garage](designAssets/google_maps_garage.png)](https://www.youtube.com/watch?feature=player_embedded&v=U6ZbHAXPnhg)
+[![Google Maps Garage](https://github.com/shalperin/android-wms/blob/master/designAssets/google_maps_garage.png?raw=true)](https://www.youtube.com/watch?feature=player_embedded&v=U6ZbHAXPnhg)
 
