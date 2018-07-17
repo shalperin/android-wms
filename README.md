@@ -81,9 +81,9 @@ In addition to the following code snippets, please see the complete demo in this
 
 Here is a WMSTileProvider class, which inherits from UrlTileProvider.  It supports the above bounding box calculation.
 
-  import com.google.android.gms.maps.model.UrlTileProvider;
+    import com.google.android.gms.maps.model.UrlTileProvider;
  
-  public abstract class WMSTileProvider extends UrlTileProvider {
+    public abstract class WMSTileProvider extends UrlTileProvider {
   
     // Web Mercator n/w corner of the map.
     private static final double[] TILE_ORIGIN = {-20037508.34789244, 20037508.34789244};
