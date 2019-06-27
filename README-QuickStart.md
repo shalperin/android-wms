@@ -2,14 +2,11 @@ Quick Start
 ===========
 + Clone the git repo.
 + **Import** this project into Android Studio.
-+ Get a Google V2 Android Maps API key and add it 
-   to the manifest (see TODO in Manifest)
-+ Check that the demo WMS service in TileProviderFactory is still
-    valid, or add your own.  (See the TODO in TileProviderFactory)
++ Google Maps API Key 
+  + Try running the project, it is configured with a demo API key.
+  + Get your own Google V2 Android Maps API key and add it to the manifest (see TODO in Manifest)
++ Check that the demo WMS service in TileProviderFactory is still valid, or add your own.  (See debugging hints below.)
 + Run 
-    **preferably on a real device, this project needs 
-      google play services which can be a pain to get running
-      on an emulator (though not impossible.)
 
 
 Debugging hints
