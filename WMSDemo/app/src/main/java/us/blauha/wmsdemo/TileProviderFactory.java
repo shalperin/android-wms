@@ -17,16 +17,16 @@ public class TileProviderFactory {
         // (TODO check that this WMS service still exists at the time you try to run this demo,
         // if it doesn't, find another one that supports EPSG:900913
         final String WMS_FORMAT_STRING =
-				"http://sedac.ciesin.columbia.edu/geoserver/wms" +
+				"https://ahocevar.com/geoserver/wms" +
 	    		"?service=WMS" +
 	    		"&version=1.1.1" +  			
 	    		"&request=GetMap" +
-	    		"&layers=gpw-v3-population-density_2000" +
+	    		"&layers=topp:states" +
 	    		"&bbox=%f,%f,%f,%f" +
 	    		"&width=256" +
 	    		"&height=256" +
-	    		"&srs=EPSG:900913" +
-	    		"&format=image/png" +				
+	    		"&srs=EPSG:900913" +  // NB This is important, other SRS's won't work.
+	    		"&format=image/png" +
 	    		"&transparent=true";
 		
 		

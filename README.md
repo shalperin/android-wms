@@ -4,12 +4,16 @@
 
 ## Implemented Using a Google Maps Android API v2, TileLayer
 
-### Android Weekly, 2/2013
 Sam Halperin
 email: [sam@samhalperin.com](mailto:sam@samhalperin.com)
 
-
 *There is also a README-QuickStart.md in the root of the GitHub repo.*
+
+### News 
++ 27, June 2019
+  + Updated Gradle plugin from 3.4.1 to 5.1.1
+  + Changed demo WMS layer
+  + Updated Manifest to indicate demo map key
 
 ![WMS Image](https://github.com/shalperin/android-wms/blob/master/designAssets/ptm.png?raw=true
 )
@@ -195,3 +199,4 @@ This article presented a demonstration of a simple WMS client using Google's And
 
 [![Google Maps Garage](https://github.com/shalperin/android-wms/blob/master/designAssets/google_maps_garage.png?raw=true)](https://www.youtube.com/watch?feature=player_embedded&v=U6ZbHAXPnhg)
 
+*Originally featured in Android Weekly, 2013*
