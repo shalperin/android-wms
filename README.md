@@ -15,11 +15,10 @@ email: [sam@samhalperin.com](mailto:sam@samhalperin.com)
   + Changed demo WMS layer
   + Updated Manifest to indicate demo map key
 
-![WMS Image](https://github.com/shalperin/android-wms/blob/master/designAssets/ptm.png?raw=true
+![WMS Image](/designAssets/wms.png)
 )
 
 
-*[PhillyTreeMap](http://www.phillytreemap.org) Android App (Released Spring 2013) showing WMS technique described in the article.*
 
 ## Intro
 
